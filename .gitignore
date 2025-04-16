@@ -2,3 +2,9 @@
 .DS_Store
 Frameworks/*
 !Frameworks/ignore-me.txt
+*.xcuserdata
+*.xcuserstate
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+*.xcodeproj/xcuserdata/

@@ -10,7 +10,7 @@ The `FaceCamera` module provides a plug-and-play face capture component designed
 
 ## Setup
 
-1. Add the following XCFrameworks to your project:
+1. Add the following XCFrameworks to `/Frameworks` [directory](./Frameworks/) and your project:
    - `FaceCamera.xcframework`
    - `IDLiveFaceCamera.xcframework`
    - `IDLiveFaceIAD.xcframework`
