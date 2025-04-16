@@ -1,0 +1,4 @@
+# Please fill up this directory with the GBG provided dependencies.
+.DS_Store
+Frameworks/*
+!Frameworks/ignore-me.txt
