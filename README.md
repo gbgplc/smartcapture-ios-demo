@@ -2,7 +2,7 @@
 
 ![gbg-logo](./img/gbg-logo.png)
 
-Here you can find an implementation example for the `FaceCamera` module. You'll see a SwiftUI approach in [`FaceCameraSampleAppSwiftUI`](./FaceCameraSampleAppSwiftUI/), and a `UIKit` implementation sample in the [`FaceCameraSampleApp`]() app target.
+Here you can find an implementation example for the `FaceCamera` module. You'll see a SwiftUI approach in [`FaceCameraSampleAppSwiftUI`](./FaceCameraSampleAppSwiftUI/), and a `UIKit` implementation sample in the [`FaceCameraSampleApp`]() app target. You can find SDK documentation [here](https://smartcapture-docs.idscan.cloud/docs/ios/intro)
 
 ## Overview
 
