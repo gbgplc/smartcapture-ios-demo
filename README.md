@@ -18,13 +18,17 @@ The `FaceCamera` module provides a plug-and-play face capture component designed
 2. In your target’s **Frameworks, Libraries, and Embedded Content**, ensure all three are set to **Embed & Sign**.
     ![embed-and-sign](./img/embed-sign-frameworks.png)
 
-3. Add the following usage description to your `Info.plist`:
+3. Add an additional string catalog named `InfoPlist.xcstrings` to your project to localize the Info.plist file of your project. 
+
+    - Add a key named NSCameraUsageDescription to customize the camera permission request message.
    ```xml
    <key>NSCameraUsageDescription</key>
    <string>This app requires camera access for identity verification.</string>
    ```
 
-4. Import the module where needed:
+4. Customise the localised messages for the face camera module following the keys provided in the [documentation](https://smartcapture-docs.idscan.cloud/docs/ios/face-camera/customization)
+
+5. Import the module where needed:
     ```swift
     import FaceCamera
     ```
@@ -38,7 +42,7 @@ The `FaceCamera` module provides a plug-and-play face capture component designed
 ## Requirements
 
 - iOS 15.0+
-- FaceCamera 1.0.0
+- FaceCamera 1.0.2
 
 ## Agreement
 
