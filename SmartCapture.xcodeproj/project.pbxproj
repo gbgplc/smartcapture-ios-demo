@@ -1,0 +1,496 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 70;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC39D22B2BFD8A6400837E7F /* SettingsHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC39D22A2BFD8A6400837E7F /* SettingsHomeView.swift */; };
+		AC6A82D82BFC0D4D006BFFC0 /* SmartCaptureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A82D72BFC0D4D006BFFC0 /* SmartCaptureApp.swift */; };
+		AC6A82DA2BFC0D4D006BFFC0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A82D92BFC0D4D006BFFC0 /* HomeView.swift */; };
+		AC6A82DC2BFC0D4E006BFFC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC6A82DB2BFC0D4E006BFFC0 /* Assets.xcassets */; };
+		AC6A82DF2BFC0D4E006BFFC0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC6A82DE2BFC0D4E006BFFC0 /* Preview Assets.xcassets */; };
+		AC8358462BFC1C0000F97F6C /* SCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8358452BFC1C0000F97F6C /* SCButton.swift */; };
+		AC8358482BFC1C1500F97F6C /* SCDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8358472BFC1C1500F97F6C /* SCDescription.swift */; };
+		C9118BE82DAD132600470CF9 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = C9118BE72DAD132600470CF9 /* InfoPlist.xcstrings */; };
+		C9AF50952D9AB7E200201623 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = C9AF50942D9AB7E200201623 /* Localizable.xcstrings */; };
+		F66477882EB8EF6B0062AA74 /* Document.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F664776F2EB8EBEC0062AA74 /* Document.xcframework */; };
+		F66477892EB8EF6B0062AA74 /* Document.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F664776F2EB8EBEC0062AA74 /* Document.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F664778A2EB8EF6C0062AA74 /* FaceCamera.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66477712EB8EBEC0062AA74 /* FaceCamera.xcframework */; };
+		F664778B2EB8EF6C0062AA74 /* FaceCamera.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F66477712EB8EBEC0062AA74 /* FaceCamera.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F664778C2EB8EF6D0062AA74 /* IDLiveFaceCamera.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66477732EB8EBEC0062AA74 /* IDLiveFaceCamera.xcframework */; };
+		F664778D2EB8EF6D0062AA74 /* IDLiveFaceCamera.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F66477732EB8EBEC0062AA74 /* IDLiveFaceCamera.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F664778E2EB8EF6E0062AA74 /* IDLiveFaceIAD.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66477742EB8EBEC0062AA74 /* IDLiveFaceIAD.xcframework */; };
+		F664778F2EB8EF6E0062AA74 /* IDLiveFaceIAD.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F66477742EB8EBEC0062AA74 /* IDLiveFaceIAD.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F66477972EB905F80062AA74 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66477962EB905F80062AA74 /* HomeViewModel.swift */; };
+		F66478182EB9256F0062AA74 /* IDSCamera.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66478142EB925580062AA74 /* IDSCamera.xcframework */; };
+		F66478192EB9256F0062AA74 /* IDSCamera.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F66478142EB925580062AA74 /* IDSCamera.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F664781C2EB925720062AA74 /* Lottie.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66478152EB925580062AA74 /* Lottie.xcframework */; };
+		F664781D2EB925720062AA74 /* Lottie.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F66478152EB925580062AA74 /* Lottie.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		971C588D2D637DCE00B924BA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F664781D2EB925720062AA74 /* Lottie.xcframework in Embed Frameworks */,
+				F66477892EB8EF6B0062AA74 /* Document.xcframework in Embed Frameworks */,
+				F664778B2EB8EF6C0062AA74 /* FaceCamera.xcframework in Embed Frameworks */,
+				F664778F2EB8EF6E0062AA74 /* IDLiveFaceIAD.xcframework in Embed Frameworks */,
+				F664778D2EB8EF6D0062AA74 /* IDLiveFaceCamera.xcframework in Embed Frameworks */,
+				F66478192EB9256F0062AA74 /* IDSCamera.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		971C588E2D67316500B924BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AC39D22A2BFD8A6400837E7F /* SettingsHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHomeView.swift; sourceTree = "<group>"; };
+		AC6A82D42BFC0D4D006BFFC0 /* SmartCapture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartCapture.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC6A82D72BFC0D4D006BFFC0 /* SmartCaptureApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartCaptureApp.swift; sourceTree = "<group>"; };
+		AC6A82D92BFC0D4D006BFFC0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AC6A82DB2BFC0D4E006BFFC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AC6A82DE2BFC0D4E006BFFC0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AC8358452BFC1C0000F97F6C /* SCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCButton.swift; sourceTree = "<group>"; };
+		AC8358472BFC1C1500F97F6C /* SCDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCDescription.swift; sourceTree = "<group>"; };
+		ACB6EB372DC99E450083AD3A /* SmartCapture.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = SmartCapture.xctestplan; sourceTree = "<group>"; };
+		C9118BE72DAD132600470CF9 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
+		C9AF50942D9AB7E200201623 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		F664776F2EB8EBEC0062AA74 /* Document.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:P927Y32WJT:IDScan Biometrics Ltd"; lastKnownFileType = wrapper.xcframework; path = Document.xcframework; sourceTree = "<group>"; };
+		F66477712EB8EBEC0062AA74 /* FaceCamera.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:P927Y32WJT:IDScan Biometrics Ltd"; lastKnownFileType = wrapper.xcframework; path = FaceCamera.xcframework; sourceTree = "<group>"; };
+		F66477732EB8EBEC0062AA74 /* IDLiveFaceCamera.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:CQQF4ZK23A:ID R&D Inc."; lastKnownFileType = wrapper.xcframework; path = IDLiveFaceCamera.xcframework; sourceTree = "<group>"; };
+		F66477742EB8EBEC0062AA74 /* IDLiveFaceIAD.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:CQQF4ZK23A:ID R&D Inc."; lastKnownFileType = wrapper.xcframework; path = IDLiveFaceIAD.xcframework; sourceTree = "<group>"; };
+		F66477962EB905F80062AA74 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		F66478142EB925580062AA74 /* IDSCamera.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = IDSCamera.xcframework; path = Carthage/Build/IDSCamera.xcframework; sourceTree = SOURCE_ROOT; };
+		F66478152EB925580062AA74 /* Lottie.xcframework */ = {isa = PBXFileReference; expectedSignature = "SelfSigned:892F1B43047B50538F2F46EAD92900DD3D4811F3582178C061A5FB20F111CB26"; lastKnownFileType = wrapper.xcframework; name = Lottie.xcframework; path = Carthage/Build/Lottie.xcframework; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		F60A30352EB5268C00975966 /* Face */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Face; sourceTree = "<group>"; };
+		F664773F2EB8E92A0062AA74 /* Document */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Document; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC6A82D12BFC0D4D006BFFC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F664781C2EB925720062AA74 /* Lottie.xcframework in Frameworks */,
+				F664778C2EB8EF6D0062AA74 /* IDLiveFaceCamera.xcframework in Frameworks */,
+				F66477882EB8EF6B0062AA74 /* Document.xcframework in Frameworks */,
+				F66478182EB9256F0062AA74 /* IDSCamera.xcframework in Frameworks */,
+				F664778A2EB8EF6C0062AA74 /* FaceCamera.xcframework in Frameworks */,
+				F664778E2EB8EF6E0062AA74 /* IDLiveFaceIAD.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC39D2272BFD89EE00837E7F /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				AC39D22A2BFD8A6400837E7F /* SettingsHomeView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		AC6A82CB2BFC0D4D006BFFC0 = {
+			isa = PBXGroup;
+			children = (
+				ACB6EB372DC99E450083AD3A /* SmartCapture.xctestplan */,
+				AC6A82D62BFC0D4D006BFFC0 /* SmartCapture */,
+				AC6A82D52BFC0D4D006BFFC0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC6A82D52BFC0D4D006BFFC0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC6A82D42BFC0D4D006BFFC0 /* SmartCapture.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC6A82D62BFC0D4D006BFFC0 /* SmartCapture */ = {
+			isa = PBXGroup;
+			children = (
+				971C588E2D67316500B924BA /* Info.plist */,
+				AC39D2272BFD89EE00837E7F /* Settings */,
+				F664773F2EB8E92A0062AA74 /* Document */,
+				F60A30352EB5268C00975966 /* Face */,
+				AC8358442BFC1BEF00F97F6C /* UI */,
+				AC6A82D72BFC0D4D006BFFC0 /* SmartCaptureApp.swift */,
+				AC6A82D92BFC0D4D006BFFC0 /* HomeView.swift */,
+				F66477962EB905F80062AA74 /* HomeViewModel.swift */,
+				AC6A82DB2BFC0D4E006BFFC0 /* Assets.xcassets */,
+				AC6A82DD2BFC0D4E006BFFC0 /* Preview Content */,
+				C9AF50942D9AB7E200201623 /* Localizable.xcstrings */,
+				C9118BE72DAD132600470CF9 /* InfoPlist.xcstrings */,
+				F664777D2EB8EBEC0062AA74 /* Dependencies */,
+			);
+			path = SmartCapture;
+			sourceTree = "<group>";
+		};
+		AC6A82DD2BFC0D4E006BFFC0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AC6A82DE2BFC0D4E006BFFC0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AC8358442BFC1BEF00F97F6C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AC8358452BFC1C0000F97F6C /* SCButton.swift */,
+				AC8358472BFC1C1500F97F6C /* SCDescription.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		F66477702EB8EBEC0062AA74 /* document */ = {
+			isa = PBXGroup;
+			children = (
+				F664776F2EB8EBEC0062AA74 /* Document.xcframework */,
+			);
+			path = document;
+			sourceTree = "<group>";
+		};
+		F66477722EB8EBEC0062AA74 /* facecamera */ = {
+			isa = PBXGroup;
+			children = (
+				F66477712EB8EBEC0062AA74 /* FaceCamera.xcframework */,
+			);
+			path = facecamera;
+			sourceTree = "<group>";
+		};
+		F66477752EB8EBEC0062AA74 /* idrnd */ = {
+			isa = PBXGroup;
+			children = (
+				F66477732EB8EBEC0062AA74 /* IDLiveFaceCamera.xcframework */,
+				F66477742EB8EBEC0062AA74 /* IDLiveFaceIAD.xcframework */,
+			);
+			path = idrnd;
+			sourceTree = "<group>";
+		};
+		F664777D2EB8EBEC0062AA74 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				F66477702EB8EBEC0062AA74 /* document */,
+				F66477722EB8EBEC0062AA74 /* facecamera */,
+				F66477752EB8EBEC0062AA74 /* idrnd */,
+				F66478142EB925580062AA74 /* IDSCamera.xcframework */,
+				F66478152EB925580062AA74 /* Lottie.xcframework */,
+			);
+			path = Dependencies;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC6A82D32BFC0D4D006BFFC0 /* SmartCapture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC6A82E22BFC0D4E006BFFC0 /* Build configuration list for PBXNativeTarget "SmartCapture" */;
+			buildPhases = (
+				AC6A82D02BFC0D4D006BFFC0 /* Sources */,
+				AC6A82D12BFC0D4D006BFFC0 /* Frameworks */,
+				AC6A82D22BFC0D4D006BFFC0 /* Resources */,
+				971C588D2D637DCE00B924BA /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				F60A30352EB5268C00975966 /* Face */,
+				F664773F2EB8E92A0062AA74 /* Document */,
+			);
+			name = SmartCapture;
+			productName = SmartCapture;
+			productReference = AC6A82D42BFC0D4D006BFFC0 /* SmartCapture.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC6A82CC2BFC0D4D006BFFC0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					AC6A82D32BFC0D4D006BFFC0 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = AC6A82CF2BFC0D4D006BFFC0 /* Build configuration list for PBXProject "SmartCapture" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				es,
+			);
+			mainGroup = AC6A82CB2BFC0D4D006BFFC0;
+			productRefGroup = AC6A82D52BFC0D4D006BFFC0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC6A82D32BFC0D4D006BFFC0 /* SmartCapture */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC6A82D22BFC0D4D006BFFC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC6A82DF2BFC0D4E006BFFC0 /* Preview Assets.xcassets in Resources */,
+				AC6A82DC2BFC0D4E006BFFC0 /* Assets.xcassets in Resources */,
+				C9118BE82DAD132600470CF9 /* InfoPlist.xcstrings in Resources */,
+				C9AF50952D9AB7E200201623 /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC6A82D02BFC0D4D006BFFC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC8358482BFC1C1500F97F6C /* SCDescription.swift in Sources */,
+				AC6A82DA2BFC0D4D006BFFC0 /* HomeView.swift in Sources */,
+				AC39D22B2BFD8A6400837E7F /* SettingsHomeView.swift in Sources */,
+				F66477972EB905F80062AA74 /* HomeViewModel.swift in Sources */,
+				AC6A82D82BFC0D4D006BFFC0 /* SmartCaptureApp.swift in Sources */,
+				AC8358462BFC1C0000F97F6C /* SCButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AC6A82E02BFC0D4E006BFFC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AC6A82E12BFC0D4E006BFFC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC6A82E32BFC0D4E006BFFC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SmartCapture/Preview Content\"";
+				DEVELOPMENT_TEAM = 74QUQTVN4M;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SmartCapture/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.idscanbiometrics.enterprise.SmartCapture;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AC6A82E42BFC0D4E006BFFC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SmartCapture/Preview Content\"";
+				DEVELOPMENT_TEAM = 74QUQTVN4M;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SmartCapture/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.idscanbiometrics.enterprise.SmartCapture;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match InHouse com.idscanbiometrics.enterprise.SmartCapture";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC6A82CF2BFC0D4D006BFFC0 /* Build configuration list for PBXProject "SmartCapture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC6A82E02BFC0D4E006BFFC0 /* Debug */,
+				AC6A82E12BFC0D4E006BFFC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC6A82E22BFC0D4E006BFFC0 /* Build configuration list for PBXNativeTarget "SmartCapture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC6A82E32BFC0D4E006BFFC0 /* Debug */,
+				AC6A82E42BFC0D4E006BFFC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC6A82CC2BFC0D4D006BFFC0 /* Project object */;
+}

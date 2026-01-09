@@ -1,0 +1,1134 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%lld bytes" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld bytes"
+          }
+        }
+      }
+    },
+    "Adequate resolution: %@" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resolución adecuada: %@"
+          }
+        }
+      }
+    },
+    "Blurry frame count: %lld" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frames borrosos: %lld"
+          }
+        }
+      }
+    },
+    "Cancelled" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancelado"
+          }
+        }
+      }
+    },
+    "Capture completed" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Captura completada"
+          }
+        }
+      }
+    },
+    "Capture Details" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Detalles de captura"
+          }
+        }
+      }
+    },
+    "Capture duration (sec): %lf" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Duración de la captura (segundos): %lf"
+          }
+        }
+      }
+    },
+    "Capture Failed" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La captura falló"
+          }
+        }
+      }
+    },
+    "Capture Results" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resultados de la captura"
+          }
+        }
+      }
+    },
+    "Captured frame processing time (sec): %lf" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiempo de proceso para el frame capturado (segundos): %lf"
+          }
+        }
+      }
+    },
+    "Captured Image" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Imagen capturada"
+          }
+        }
+      }
+    },
+    "Cause: %@" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Causa: %@"
+          }
+        }
+      }
+    },
+    "Component: %@" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Componente: %@"
+          }
+        }
+      }
+    },
+    "Create New Credentials" : {
+      "comment" : "Create new credentials",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Crear nuevos credenciales"
+          }
+        }
+      }
+    },
+    "Delete Existing Credentials" : {
+      "comment" : "Delete Existing Credentials",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Borrar credenciales existentes"
+          }
+        }
+      }
+    },
+    "Dimensions" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dimensiones"
+          }
+        }
+      }
+    },
+    "DOCUMENT CAMERA" : {
+      "comment" : "Document Camera Module Option",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CAPTURA DOCUMENTO"
+          }
+        }
+      }
+    },
+    "document_auto_capture" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auto-captura - ON"
+          }
+        }
+      }
+    },
+    "document_auto_capture_info" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Una vez la imagen sea clara, tomaremos la foto de manera automática."
+          }
+        }
+      }
+    },
+    "document_auto_capture_off" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auto-captura - OFF"
+          }
+        }
+      }
+    },
+    "document_auto_capture_tip" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seguimos teniendo problemas para tomar la foto, deshabilita la auto captura."
+          }
+        }
+      }
+    },
+    "document_avoid_glare" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Evita iluminación directa en el documento."
+          }
+        }
+      }
+    },
+    "document_back_to_preview" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vuelve a la vista previa."
+          }
+        }
+      }
+    },
+    "document_back_to_retake" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vuelve a tomar la foto."
+          }
+        }
+      }
+    },
+    "document_blurry" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El documento no es claro y está borroso."
+          }
+        }
+      }
+    },
+    "document_cancel" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancelar"
+          }
+        }
+      }
+    },
+    "document_cancel_confirmation" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Estás seguro de que quieres finalizar tu verificación de identidad?"
+          }
+        }
+      }
+    },
+    "document_cancel_confirmed" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El usuario canceló el escaneo"
+          }
+        }
+      }
+    },
+    "document_capture_screen" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pantalla de captura!"
+          }
+        }
+      }
+    },
+    "document_continue" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continúa."
+          }
+        }
+      }
+    },
+    "document_end" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finalizar"
+          }
+        }
+      }
+    },
+    "document_end_check" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finaliza la verificación de identidad."
+          }
+        }
+      }
+    },
+    "document_error_component_camera" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cámara"
+          }
+        }
+      }
+    },
+    "document_error_component_other" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otro"
+          }
+        }
+      }
+    },
+    "document_error_component_smart_capture" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SmartCapture"
+          }
+        }
+      }
+    },
+    "document_example_screen" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pantalla ejemplo."
+          }
+        }
+      }
+    },
+    "document_fill_frame" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pantalla ejemplo."
+          }
+        }
+      }
+    },
+    "document_fill_frame_instruction" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coloca tu documento completamente dentro del marco"
+          }
+        }
+      }
+    },
+    "document_glare" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reflejo de luz visible en el documento"
+          }
+        }
+      }
+    },
+    "document_goto_examples" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ir a Ejemplos"
+          }
+        }
+      }
+    },
+    "document_goto_help" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ir a Ayuda"
+          }
+        }
+      }
+    },
+    "document_goto_preview" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ir a Vista Previa"
+          }
+        }
+      }
+    },
+    "document_help_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cómo tomar una foto de tu documento de identidad"
+          }
+        }
+      }
+    },
+    "document_hold_phone" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sujeta tu teléfono firmemente"
+          }
+        }
+      }
+    },
+    "document_hold_steady" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sujeta tu documento y dispositivo firmemente"
+          }
+        }
+      }
+    },
+    "document_lighting" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utiliza un área bien iluminada pero evita luces fuertes directamente arriba"
+          }
+        }
+      }
+    },
+    "document_photo_captured" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto capturada"
+          }
+        }
+      }
+    },
+    "document_place_back" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coloca tu documento con el **REVERSO** hacia arriba sobre una superficie plana y:"
+          }
+        }
+      }
+    },
+    "document_place_photo" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coloca tu documento con el **LADO DE LA FOTO** hacia arriba sobre una superficie plana y:"
+          }
+        }
+      }
+    },
+    "document_position" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coloca tu documento de identidad dentro del marco"
+          }
+        }
+      }
+    },
+    "document_preview_screen" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pantalla de vista previa"
+          }
+        }
+      }
+    },
+    "document_too_small" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El documento no llena el marco"
+          }
+        }
+      }
+    },
+    "Encrypted Data" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datos encriptados"
+          }
+        }
+      }
+    },
+    "Error" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error"
+          }
+        }
+      }
+    },
+    "FACE CAMERA" : {
+      "comment" : "Face Camera Module Option",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CAPTURA CARA"
+          }
+        }
+      }
+    },
+    "GBG Smart Capture Demo" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GBG Smart Capture Demo"
+          }
+        }
+      }
+    },
+    "Glare frame count: %lld" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frames con reflejos: %lld"
+          }
+        }
+      }
+    },
+    "Glare Free: %@" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Libre de reflejos: %@"
+          }
+        }
+      }
+    },
+    "Good: %@" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Satisfactorio: %@"
+          }
+        }
+      }
+    },
+    "Has disabled auto capture: %@" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auto capture estaba desactivada: %@"
+          }
+        }
+      }
+    },
+    "Height: %lld px" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Altura: %lld px"
+          }
+        }
+      }
+    },
+    "Image saved!" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Imagen guardada!"
+          }
+        }
+      }
+    },
+    "JOURNEY" : {
+      "comment" : "Journey Module Option",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "RUTA"
+          }
+        }
+      }
+    },
+    "Low resolution frame count: %lld" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frames con baja resolución: %lld"
+          }
+        }
+      }
+    },
+    "Message: %@" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mensaje: %@"
+          }
+        }
+      }
+    },
+    "OK" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        }
+      }
+    },
+    "Out of bounds frame count: %lld" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frames sin documento a la vista: %lld"
+          }
+        }
+      }
+    },
+    "OZONE" : {
+      "comment" : "Ozone Module Option",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OZONE"
+          }
+        }
+      }
+    },
+    "Permission denied" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Permiso denegado"
+          }
+        }
+      }
+    },
+    "Please allow access to Photos in Settings." : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Por favor, permita el acceso a Fotos en Configuración."
+          }
+        }
+      }
+    },
+    "Quality Results" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resultados de calidad"
+          }
+        }
+      }
+    },
+    "Save to Camera Roll" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guardar a la libreria"
+          }
+        }
+      }
+    },
+    "Select a demo to get started" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selecciona una demo para empezar"
+          }
+        }
+      }
+    },
+    "Select Credentials" : {
+      "comment" : "Select Credentials",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seleccione credenciales"
+          }
+        }
+      }
+    },
+    "Select Journey" : {
+      "comment" : "Select Journey",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seleccione ruta"
+          }
+        }
+      }
+    },
+    "SETTINGS" : {
+      "comment" : "Settings User Option",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AJUSTES"
+          }
+        }
+      }
+    },
+    "Share" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compartir"
+          }
+        }
+      }
+    },
+    "Sharing encrypted data" : {
+      "comment" : "The accessibility label for the progress view displayed when sharing encrypted data.",
+      "isCommentAutoGenerated" : true
+    },
+    "Sharing unencrypted data" : {
+      "comment" : "A label describing the action of sharing unencrypted data.",
+      "isCommentAutoGenerated" : true
+    },
+    "Sharp: %@" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Definición: %@"
+          }
+        }
+      }
+    },
+    "smart_capture_camera_permission_denied" : {
+      "comment" : "Camera permission denied",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Camera permission denied"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Permiso denegado para acceder a la cámara"
+          }
+        }
+      }
+    },
+    "smart_capture_face_face_camera_directly" : {
+      "comment" : "Face is not directly in front of the camera",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Face camera directly"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alinee su cara a la camara"
+          }
+        }
+      }
+    },
+    "smart_capture_face_fill_oval" : {
+      "comment" : "Face is not centered in the oval (i.e too far)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fill the oval"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rellene el óvalo"
+          }
+        }
+      }
+    },
+    "smart_capture_face_hold_still" : {
+      "comment" : "Face is moving",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hold still"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se mueva"
+          }
+        }
+      }
+    },
+    "smart_capture_face_move_back_and_fill_oval" : {
+      "comment" : "Face is too close",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Move back and fill the oval"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aléjese y rellene el óvalo"
+          }
+        }
+      }
+    },
+    "smart_capture_face_not_detected" : {
+      "comment" : "Face not detected",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Face not detected"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cara no detectada"
+          }
+        }
+      }
+    },
+    "smart_capture_face_one_face_only" : {
+      "comment" : "Multiple faces detected",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "One face only"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Una cara solo"
+          }
+        }
+      }
+    },
+    "smart_capture_face_photo_captured" : {
+      "comment" : "Photo captured",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Photo Captured"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto capturada"
+          }
+        }
+      }
+    },
+    "smart_capture_face_position_in_oval" : {
+      "comment" : "Face not found\nGuiding the user to position the face\nPhoto is not good quality\nPosition your face within the oval",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Position your face within the oval"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Posicione su cara dentro del óvalo"
+          }
+        }
+      }
+    },
+    "smart_capture_initialization_error" : {
+      "comment" : "Initialization error",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Initialization error"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error de inicialización"
+          }
+        }
+      }
+    },
+    "smart_capture_manual_capture_not_allowed" : {
+      "comment" : "Manual capture not allowed",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manual capture not allowed"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Captura manual no permitida"
+          }
+        }
+      }
+    },
+    "smart_capture_photo_capture_error" : {
+      "comment" : "Photo capture error",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Photo capture error"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error al capturar la foto"
+          }
+        }
+      }
+    },
+    "smart_capture_unknown_error" : {
+      "comment" : "Unknown error",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unknown error"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error desconocido"
+          }
+        }
+      }
+    },
+    "Start" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Empezar"
+          }
+        }
+      }
+    },
+    "Start Journey" : {
+      "comment" : "Start Journey",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Iniciar ruta"
+          }
+        }
+      }
+    },
+    "Temporary Credentials" : {
+      "comment" : "Temporary Credentials",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Credenciales temporales"
+          }
+        }
+      }
+    },
+    "Total frame count: %lld" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Numero total de frames: %lld"
+          }
+        }
+      }
+    },
+    "Unencrypted Data" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datos sin encriptar"
+          }
+        }
+      }
+    },
+    "Width: %lld px" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anchura: %lld px"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.1"
+}
