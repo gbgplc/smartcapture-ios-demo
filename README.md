@@ -32,8 +32,7 @@ Here you can find an implementation example for the demos for the `Face` and `Do
   Additonal frameworks to be installed via Carthage or alternative package manager:      
   - `github "airbnb/lottie-ios" "4.5.1"`
 
-2. In your target’s **Frameworks, Libraries, and Embedded Content**, ensure all three are set to **Embed & Sign**.
-    ![embed-and-sign](./img/embed-sign-frameworks.png)
+2. In your target’s **Frameworks, Libraries, and Embedded Content**, ensure all are set to **Embed & Sign**.
 
 3. Add an additional string catalog named `InfoPlist.xcstrings` to your project to localize the Info.plist file of your project. 
 
