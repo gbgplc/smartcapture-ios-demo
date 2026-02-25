@@ -68,7 +68,7 @@
 		F66477732EB8EBEC0062AA74 /* IDLiveFaceCamera.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:CQQF4ZK23A:ID R&D Inc."; lastKnownFileType = wrapper.xcframework; path = IDLiveFaceCamera.xcframework; sourceTree = "<group>"; };
 		F66477742EB8EBEC0062AA74 /* IDLiveFaceIAD.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:CQQF4ZK23A:ID R&D Inc."; lastKnownFileType = wrapper.xcframework; path = IDLiveFaceIAD.xcframework; sourceTree = "<group>"; };
 		F66477962EB905F80062AA74 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		F66478142EB925580062AA74 /* IDSCamera.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = IDSCamera.xcframework; path = Carthage/Build/IDSCamera.xcframework; sourceTree = SOURCE_ROOT; };
+		F66478142EB925580062AA74 /* IDSCamera.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:P927Y32WJT:IDScan Biometrics Ltd"; lastKnownFileType = wrapper.xcframework; name = IDSCamera.xcframework; path = Dependencies/idscamera/IDSCamera.xcframework; sourceTree = SOURCE_ROOT; };
 		F66478152EB925580062AA74 /* Lottie.xcframework */ = {isa = PBXFileReference; expectedSignature = "SelfSigned:892F1B43047B50538F2F46EAD92900DD3D4811F3582178C061A5FB20F111CB26"; lastKnownFileType = wrapper.xcframework; name = Lottie.xcframework; path = Carthage/Build/Lottie.xcframework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
