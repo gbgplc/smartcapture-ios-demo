@@ -12,6 +12,7 @@ import Photos
 struct SuccessView: View {
     @State private var showSaveAlert = false
     @State private var showDeniedAlert = false
+    @State private var showGenericErrorAlert = false
 
     let success: Success
     let metadata: DocumentProcessingMetadata?
@@ -130,7 +131,7 @@ struct SuccessView: View {
             }
             .frame(maxWidth: .infinity, alignment: .center)
             Button(action: {
-                saveImageToCameraRoll(uiImage)
+                saveImageToCameraRoll(success.image.image)
             }) {
                 Label("Save to Camera Roll", systemImage: "square.and.arrow.down")
                     .font(.body)
@@ -146,6 +147,11 @@ struct SuccessView: View {
             } message: {
                 Text("Please allow access to Photos in Settings.")
             }
+            .alert("There was an error", isPresented: $showGenericErrorAlert) {
+                Button("OK", role: .cancel) { }
+            } message: {
+                Text("There was an error during the operation. Please try again.")
+            }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding()
@@ -153,13 +159,25 @@ struct SuccessView: View {
         .cornerRadius(16)
     }
 
-    func saveImageToCameraRoll(_ image: UIImage) {
+    private func saveImageToCameraRoll(_ data: Data) {
         PHPhotoLibrary.requestAuthorization(for: .addOnly) { status in
             DispatchQueue.main.async {
-                if status == .authorized || status == .limited {
-                    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-                    showSaveAlert = true
-                } else {
+                if status == .authorized {
+                    PHPhotoLibrary.shared().performChanges({
+                        let request = PHAssetCreationRequest.forAsset()
+                        request.addResource(with: .photo, data: data, options: nil)
+                    }, completionHandler: { success, error in
+                        DispatchQueue.main.async {
+                            if success && error == nil {
+                                showSaveAlert = true
+                            }
+                            else {
+                                showGenericErrorAlert = true
+                            }
+                        }
+                    })
+                }
+                else {
                     showDeniedAlert = true
                 }
             }
