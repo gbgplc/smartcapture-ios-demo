@@ -17,6 +17,8 @@ class HomeViewModel: NSObject, ObservableObject {
     @Published var documentResult: DocumentScannerResult?
     @Published var showCameraError = false
     @Published var showCancellationAlert = false
+    // NFC
+    @Published var showNFCDemo = false
     
     lazy var delegateHandler: FaceCameraDelegateHandler = {
         FaceCameraDelegateHandler(parent: self)

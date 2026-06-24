@@ -61,15 +61,7 @@ struct StubView: View {
 // MARK: - UI
 struct HomeView: View {
     @StateObject private var viewModel = HomeViewModel()
-    
-    let gbgGradient = LinearGradient(
-        gradient: Gradient(colors: [
-            Color(red: 0.64, green: 0.63, blue: 1.0), // (vivid purple)
-            Color(red: 0.96, green: 0.97, blue: 1.0)  // (light blue)
-        ]),
-        startPoint: .top,
-        endPoint: .bottom
-    )
+    @Environment(\.colorScheme) private var colorScheme
     
     let columns = [
         GridItem(.flexible()),
@@ -78,7 +70,7 @@ struct HomeView: View {
     
     var body: some View {
         ZStack {
-            gbgGradient.ignoresSafeArea()
+            SCUIUtil.gbgGradient(for: colorScheme).ignoresSafeArea()
             VStack(spacing: 20) {
                 VStack(spacing: 20) {
                     Text("GBG Smart Capture Demo")
@@ -102,10 +94,10 @@ struct HomeView: View {
                             DemoTypeView(label: "Face", systemImage: "face.dashed") {
                                 viewModel.showCamera = true
                             }
-//                        case .ozone:
-//                            DemoTypeView(label: "NFC", systemImage: "wave.3.right.circle") {
-//                                // Show the ozone demo
-//                            }
+                        case .ozone:
+                            DemoTypeView(label: "NFC", systemImage: "wave.3.right.circle") {
+                                viewModel.showNFCDemo = true
+                            }
                         default:
                             EmptyView()
                         }
@@ -121,6 +113,9 @@ struct HomeView: View {
             }
             .fullScreenCover(isPresented: $viewModel.showDocumentsDemo) {
                 DocumentDemoView(documentResult: $viewModel.documentResult)
+            }
+            .fullScreenCover(isPresented: $viewModel.showNFCDemo) {
+                NFCDemoView()
             }
             .alert("Error", isPresented: $viewModel.showCameraError) {
                 Button("OK", role: .cancel) { }
@@ -157,7 +152,7 @@ struct HomeView: View {
 }
 
 struct DemoTypeView: View {
-    let label: String
+    let label: LocalizedStringKey
     let systemImage: String
     let action: () -> Void
     

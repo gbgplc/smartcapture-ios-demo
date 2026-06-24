@@ -13,6 +13,18 @@
         }
       }
     },
+    "NFCReaderUsageDescription" : {
+      "comment" : "Privacy - NFC Scan Usage Description",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Required to scan your document through NFC."
+          }
+        }
+      }
+    },
     "NSCameraUsageDescription" : {
       "comment" : "Purpose for access to the camera",
       "extractionState" : "manual",

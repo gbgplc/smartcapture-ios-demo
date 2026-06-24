@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		366B55B62F92BC90000CD26F /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366B55B52F92BC90000CD26F /* AsyncButton.swift */; };
+		366B55B82F92BCEA000CD26F /* OzoneNFCSwiftUIWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366B55B72F92BCEA000CD26F /* OzoneNFCSwiftUIWrapper.swift */; };
+		366B55BA2F92BD21000CD26F /* NFCResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366B55B92F92BD21000CD26F /* NFCResultView.swift */; };
+		3675108E2F8EF5FB007EB3EC /* NFCDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3675108D2F8EF5FB007EB3EC /* NFCDemoView.swift */; };
+		367510982F8EFA81007EB3EC /* OpenSSL.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 367510962F8EFA3E007EB3EC /* OpenSSL.xcframework */; };
+		367510992F8EFA81007EB3EC /* OpenSSL.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 367510962F8EFA3E007EB3EC /* OpenSSL.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3675109A2F8EFA82007EB3EC /* OzoneNFC.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 367510932F8EF8C3007EB3EC /* OzoneNFC.xcframework */; };
+		3675109B2F8EFA82007EB3EC /* OzoneNFC.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 367510932F8EF8C3007EB3EC /* OzoneNFC.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		36C7455D2FC8B9F100D5F64A /* SCUIUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C7455C2FC8B9F100D5F64A /* SCUIUtil.swift */; };
 		AC39D22B2BFD8A6400837E7F /* SettingsHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC39D22A2BFD8A6400837E7F /* SettingsHomeView.swift */; };
 		AC6A82D82BFC0D4D006BFFC0 /* SmartCaptureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A82D72BFC0D4D006BFFC0 /* SmartCaptureApp.swift */; };
 		AC6A82DA2BFC0D4D006BFFC0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A82D92BFC0D4D006BFFC0 /* HomeView.swift */; };
@@ -40,8 +49,10 @@
 			files = (
 				F664781D2EB925720062AA74 /* Lottie.xcframework in Embed Frameworks */,
 				F66477892EB8EF6B0062AA74 /* Document.xcframework in Embed Frameworks */,
+				367510992F8EFA81007EB3EC /* OpenSSL.xcframework in Embed Frameworks */,
 				F664778B2EB8EF6C0062AA74 /* FaceCamera.xcframework in Embed Frameworks */,
 				F664778F2EB8EF6E0062AA74 /* IDLiveFaceIAD.xcframework in Embed Frameworks */,
+				3675109B2F8EFA82007EB3EC /* OzoneNFC.xcframework in Embed Frameworks */,
 				F664778D2EB8EF6D0062AA74 /* IDLiveFaceCamera.xcframework in Embed Frameworks */,
 				F66478192EB9256F0062AA74 /* IDSCamera.xcframework in Embed Frameworks */,
 			);
@@ -51,6 +62,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		366B55B52F92BC90000CD26F /* AsyncButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncButton.swift; sourceTree = "<group>"; };
+		366B55B72F92BCEA000CD26F /* OzoneNFCSwiftUIWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OzoneNFCSwiftUIWrapper.swift; sourceTree = "<group>"; };
+		366B55B92F92BD21000CD26F /* NFCResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCResultView.swift; sourceTree = "<group>"; };
+		366B55BB2F92C046000CD26F /* SmartCapture.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SmartCapture.entitlements; sourceTree = "<group>"; };
+		3675108D2F8EF5FB007EB3EC /* NFCDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCDemoView.swift; sourceTree = "<group>"; };
+		367510932F8EF8C3007EB3EC /* OzoneNFC.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = OzoneNFC.xcframework; sourceTree = "<group>"; };
+		367510962F8EFA3E007EB3EC /* OpenSSL.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:67RAULRX93:Marcin Krzyzanowski"; lastKnownFileType = wrapper.xcframework; name = OpenSSL.xcframework; path = Carthage/Build/OpenSSL.xcframework; sourceTree = SOURCE_ROOT; };
+		36C7455C2FC8B9F100D5F64A /* SCUIUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCUIUtil.swift; sourceTree = "<group>"; };
 		971C588E2D67316500B924BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AC39D22A2BFD8A6400837E7F /* SettingsHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHomeView.swift; sourceTree = "<group>"; };
 		AC6A82D42BFC0D4D006BFFC0 /* SmartCapture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartCapture.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,13 +106,34 @@
 				F66477882EB8EF6B0062AA74 /* Document.xcframework in Frameworks */,
 				F66478182EB9256F0062AA74 /* IDSCamera.xcframework in Frameworks */,
 				F664778A2EB8EF6C0062AA74 /* FaceCamera.xcframework in Frameworks */,
+				3675109A2F8EFA82007EB3EC /* OzoneNFC.xcframework in Frameworks */,
 				F664778E2EB8EF6E0062AA74 /* IDLiveFaceIAD.xcframework in Frameworks */,
+				367510982F8EFA81007EB3EC /* OpenSSL.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3675108C2F8EF5D7007EB3EC /* NFC */ = {
+			isa = PBXGroup;
+			children = (
+				3675108D2F8EF5FB007EB3EC /* NFCDemoView.swift */,
+				366B55B52F92BC90000CD26F /* AsyncButton.swift */,
+				366B55B72F92BCEA000CD26F /* OzoneNFCSwiftUIWrapper.swift */,
+				366B55B92F92BD21000CD26F /* NFCResultView.swift */,
+			);
+			path = NFC;
+			sourceTree = "<group>";
+		};
+		367510942F8EF8C3007EB3EC /* ozone */ = {
+			isa = PBXGroup;
+			children = (
+				367510932F8EF8C3007EB3EC /* OzoneNFC.xcframework */,
+			);
+			path = ozone;
+			sourceTree = "<group>";
+		};
 		AC39D2272BFD89EE00837E7F /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +162,8 @@
 		AC6A82D62BFC0D4D006BFFC0 /* SmartCapture */ = {
 			isa = PBXGroup;
 			children = (
+				366B55BB2F92C046000CD26F /* SmartCapture.entitlements */,
+				3675108C2F8EF5D7007EB3EC /* NFC */,
 				971C588E2D67316500B924BA /* Info.plist */,
 				AC39D2272BFD89EE00837E7F /* Settings */,
 				F664773F2EB8E92A0062AA74 /* Document */,
@@ -152,6 +194,7 @@
 			children = (
 				AC8358452BFC1C0000F97F6C /* SCButton.swift */,
 				AC8358472BFC1C1500F97F6C /* SCDescription.swift */,
+				36C7455C2FC8B9F100D5F64A /* SCUIUtil.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -184,11 +227,13 @@
 		F664777D2EB8EBEC0062AA74 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				F66478142EB925580062AA74 /* IDSCamera.xcframework */,
+				F66478152EB925580062AA74 /* Lottie.xcframework */,
+				367510962F8EFA3E007EB3EC /* OpenSSL.xcframework */,
 				F66477702EB8EBEC0062AA74 /* document */,
 				F66477722EB8EBEC0062AA74 /* facecamera */,
 				F66477752EB8EBEC0062AA74 /* idrnd */,
-				F66478142EB925580062AA74 /* IDSCamera.xcframework */,
-				F66478152EB925580062AA74 /* Lottie.xcframework */,
+				367510942F8EF8C3007EB3EC /* ozone */,
 			);
 			path = Dependencies;
 			sourceTree = SOURCE_ROOT;
@@ -273,10 +318,15 @@
 			files = (
 				AC8358482BFC1C1500F97F6C /* SCDescription.swift in Sources */,
 				AC6A82DA2BFC0D4D006BFFC0 /* HomeView.swift in Sources */,
+				3675108E2F8EF5FB007EB3EC /* NFCDemoView.swift in Sources */,
+				366B55B82F92BCEA000CD26F /* OzoneNFCSwiftUIWrapper.swift in Sources */,
+				366B55B62F92BC90000CD26F /* AsyncButton.swift in Sources */,
 				AC39D22B2BFD8A6400837E7F /* SettingsHomeView.swift in Sources */,
+				36C7455D2FC8B9F100D5F64A /* SCUIUtil.swift in Sources */,
 				F66477972EB905F80062AA74 /* HomeViewModel.swift in Sources */,
 				AC6A82D82BFC0D4D006BFFC0 /* SmartCaptureApp.swift in Sources */,
 				AC8358462BFC1C0000F97F6C /* SCButton.swift in Sources */,
+				366B55BA2F92BD21000CD26F /* NFCResultView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +459,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SmartCapture/SmartCapture.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -441,6 +492,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SmartCapture/SmartCapture.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
