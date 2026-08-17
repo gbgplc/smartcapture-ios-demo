@@ -67,7 +67,7 @@
 		366B55B92F92BD21000CD26F /* NFCResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCResultView.swift; sourceTree = "<group>"; };
 		366B55BB2F92C046000CD26F /* SmartCapture.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SmartCapture.entitlements; sourceTree = "<group>"; };
 		3675108D2F8EF5FB007EB3EC /* NFCDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCDemoView.swift; sourceTree = "<group>"; };
-		367510932F8EF8C3007EB3EC /* OzoneNFC.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = OzoneNFC.xcframework; sourceTree = "<group>"; };
+		367510932F8EF8C3007EB3EC /* OzoneNFC.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:P927Y32WJT:IDScan Biometrics Ltd"; lastKnownFileType = wrapper.xcframework; path = OzoneNFC.xcframework; sourceTree = "<group>"; };
 		367510962F8EFA3E007EB3EC /* OpenSSL.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:67RAULRX93:Marcin Krzyzanowski"; lastKnownFileType = wrapper.xcframework; name = OpenSSL.xcframework; path = Carthage/Build/OpenSSL.xcframework; sourceTree = SOURCE_ROOT; };
 		36C7455C2FC8B9F100D5F64A /* SCUIUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCUIUtil.swift; sourceTree = "<group>"; };
 		971C588E2D67316500B924BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
