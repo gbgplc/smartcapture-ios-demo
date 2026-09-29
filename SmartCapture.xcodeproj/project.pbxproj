@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		366B55B62F92BC90000CD26F /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366B55B52F92BC90000CD26F /* AsyncButton.swift */; };
+		055271A8A9254AA3B682B048 /* MRZDocumentCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718276AAB0E04972999BE99C /* MRZDocumentCaptureView.swift */; };
 		366B55B82F92BCEA000CD26F /* OzoneNFCSwiftUIWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366B55B72F92BCEA000CD26F /* OzoneNFCSwiftUIWrapper.swift */; };
 		366B55BA2F92BD21000CD26F /* NFCResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366B55B92F92BD21000CD26F /* NFCResultView.swift */; };
 		3675108E2F8EF5FB007EB3EC /* NFCDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3675108D2F8EF5FB007EB3EC /* NFCDemoView.swift */; };
@@ -62,13 +62,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		366B55B52F92BC90000CD26F /* AsyncButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncButton.swift; sourceTree = "<group>"; };
+		718276AAB0E04972999BE99C /* MRZDocumentCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRZDocumentCaptureView.swift; sourceTree = "<group>"; };
 		366B55B72F92BCEA000CD26F /* OzoneNFCSwiftUIWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OzoneNFCSwiftUIWrapper.swift; sourceTree = "<group>"; };
 		366B55B92F92BD21000CD26F /* NFCResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCResultView.swift; sourceTree = "<group>"; };
 		366B55BB2F92C046000CD26F /* SmartCapture.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SmartCapture.entitlements; sourceTree = "<group>"; };
 		3675108D2F8EF5FB007EB3EC /* NFCDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCDemoView.swift; sourceTree = "<group>"; };
 		367510932F8EF8C3007EB3EC /* OzoneNFC.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:P927Y32WJT:IDScan Biometrics Ltd"; lastKnownFileType = wrapper.xcframework; path = OzoneNFC.xcframework; sourceTree = "<group>"; };
-		367510962F8EFA3E007EB3EC /* OpenSSL.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:67RAULRX93:Marcin Krzyzanowski"; lastKnownFileType = wrapper.xcframework; name = OpenSSL.xcframework; path = Carthage/Build/OpenSSL.xcframework; sourceTree = SOURCE_ROOT; };
+		367510962F8EFA3E007EB3EC /* OpenSSL.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:C88F57F4TJ:Goodnotes Limited"; lastKnownFileType = wrapper.xcframework; name = OpenSSL.xcframework; path = Carthage/Build/OpenSSL.xcframework; sourceTree = SOURCE_ROOT; };
 		36C7455C2FC8B9F100D5F64A /* SCUIUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCUIUtil.swift; sourceTree = "<group>"; };
 		971C588E2D67316500B924BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AC39D22A2BFD8A6400837E7F /* SettingsHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHomeView.swift; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				3675108D2F8EF5FB007EB3EC /* NFCDemoView.swift */,
-				366B55B52F92BC90000CD26F /* AsyncButton.swift */,
+				718276AAB0E04972999BE99C /* MRZDocumentCaptureView.swift */,
 				366B55B72F92BCEA000CD26F /* OzoneNFCSwiftUIWrapper.swift */,
 				366B55B92F92BD21000CD26F /* NFCResultView.swift */,
 			);
@@ -319,8 +319,8 @@
 				AC8358482BFC1C1500F97F6C /* SCDescription.swift in Sources */,
 				AC6A82DA2BFC0D4D006BFFC0 /* HomeView.swift in Sources */,
 				3675108E2F8EF5FB007EB3EC /* NFCDemoView.swift in Sources */,
+				055271A8A9254AA3B682B048 /* MRZDocumentCaptureView.swift in Sources */,
 				366B55B82F92BCEA000CD26F /* OzoneNFCSwiftUIWrapper.swift in Sources */,
-				366B55B62F92BC90000CD26F /* AsyncButton.swift in Sources */,
 				AC39D22B2BFD8A6400837E7F /* SettingsHomeView.swift in Sources */,
 				36C7455D2FC8B9F100D5F64A /* SCUIUtil.swift in Sources */,
 				F66477972EB905F80062AA74 /* HomeViewModel.swift in Sources */,

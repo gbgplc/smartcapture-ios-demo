@@ -6,159 +6,96 @@
 //
 
 import SwiftUI
+import Document
 import OzoneNFC
 
 struct NFCDemoView: View {
-    private struct FormValues {
-        let passportNumber: String
-        let dateOfBirth: Date
-        let expiryDate: Date
+    private enum Step {
+        case capture
+        case confirm(DocumentScannerResult, mrz: MRZData)
+        case scan(OzoneNFCDocumentKey, scanResult: DocumentScannerResult, mrz: MRZData)
+        case result(OzoneNFCDocument?)
     }
 
-    private enum InMemoryFormStore {
-        static var values: FormValues?
-    }
-    
-    // MARK: Use this as developer for testing.
-    private let DEFAULT_PASSPORT_NUMBER: String = ""
-    private let DEFAULT_BIRTHDAY: String = DocumentKeyDateCodec.string(from: Date())
-    private let DEFAULT_EXPIRE_DATE: String = DocumentKeyDateCodec.string(from: Date())
-    
-    @State private var passportNumber: String
-    @State private var selectedDateOfBirth: Date
-    @State private var selectedExpiryDate: Date
-    
-    @State private var showAlert = false
-    @State private var errorMessage = ""
-    
-    @State private var showResultView = false
-    @State private var passport: OzoneNFCDocument?
-    
-    @State private var showOzoneView = false
-    @State private var documentKey = OzoneNFCDocumentKey(passportNumber: "", dateOfBirth: "", expiryDate: "")
+    @State private var step: Step = .capture
+    @State private var captureAttempt = 0
 
     @Environment(\.dismiss) private var dismiss
-    @Environment(\.colorScheme) private var colorScheme
-    
-    let ozoneReader = OzoneNFCReader()
 
-    init() {
-        let storedValues = InMemoryFormStore.values
-
-        _passportNumber = State(initialValue: storedValues?.passportNumber ?? DEFAULT_PASSPORT_NUMBER)
-        _selectedDateOfBirth = State(initialValue: storedValues?.dateOfBirth ?? DocumentKeyDateCodec.date(from: DEFAULT_BIRTHDAY))
-        _selectedExpiryDate = State(initialValue: storedValues?.expiryDate ?? DocumentKeyDateCodec.date(from: DEFAULT_EXPIRE_DATE))
-    }
-
-    private var currentDocumentKey: OzoneNFCDocumentKey {
-        OzoneNFCDocumentKey(
-            passportNumber: passportNumber,
-            dateOfBirth: DocumentKeyDateCodec.string(from: selectedDateOfBirth),
-            expiryDate: DocumentKeyDateCodec.string(from: selectedExpiryDate)
-        )
-    }
-    
     var body: some View {
         NavigationView {
-            ZStack {
-                SCUIUtil.gbgGradient(for: colorScheme).ignoresSafeArea()
-
-                VStack(spacing: 20) {
-                    VStack(spacing: 12) {
-                        Image(systemName: "wave.3.right.circle")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 54, height: 54)
-                            .foregroundColor(.accentColor)
-
-                        Text(String(localized: "GBG NFC Demo", comment: "Title for NFC demo screen"))
-                            .font(.title)
-                            .fontWeight(.bold)
-                            .multilineTextAlignment(.center)
-
-                        Text(String(localized: "Enter your passport details to start an NFC document scan.", comment: "Subtitle describing NFC demo purpose"))
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
-                            .multilineTextAlignment(.center)
-                    }                    
-                    .padding(.horizontal, 20)
-
-                    Form {
-                        Section("Document Details") {
-                            TextField("Passport Number", text: $passportNumber)
-
-                            DatePicker(
-                                "Expiry Date",
-                                selection: $selectedExpiryDate,
-                                displayedComponents: .date
-                            )
-
-                            DatePicker(
-                                "Date of Birth",
-                                selection: $selectedDateOfBirth,
-                                displayedComponents: .date
-                            )
-                        }
-
-                        Section {
-                            Text(String(localized: "These values are kept in memory for this app session.", comment: "Information note about form data persistence"))
-                                .font(.footnote)
-                                .foregroundColor(.secondary)
-                        }
-
-                        Section {
-                            AsyncButton(action: readDocument) {
-                                actionLabel(title: String(localized: "Scan", comment: "Button title to start NFC scan"), systemImage: "dot.radiowaves.left.and.right")
+            Group {
+                switch step {
+                case .capture:
+                    MRZDocumentCaptureView(onCaptured: handleCaptured)
+                        .id(captureAttempt)
+                case .confirm(let scanResult, let mrz):
+                    DocumentResultView(result: scanResult.result, metadata: scanResult.metadata) {
+                        VStack(spacing: 12) {
+                            Button(action: retake) {
+                                actionLabel(title: String(localized: "Retake", comment: "Button title to retake the document photo"), systemImage: "arrow.counterclockwise", isProminent: false)
                             }
-                            .listRowBackground(Color.clear)
-
-                            Button(action: navigateToOzoneNFCView) {
-                                actionLabel(title: String(localized: "Start", comment: "Button title to start Ozone NFC flow"), systemImage: "wave.3.right")
+                            Button(action: { startScan(with: scanResult, mrz: mrz) }) {
+                                actionLabel(title: String(localized: "Start NFC scan", comment: "Button title to start the NFC scan using the read MRZ data"), systemImage: "wave.3.right", isProminent: true)
                             }
-                            .listRowBackground(Color.clear)
                         }
                     }
-                    .clipShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 24, style: .continuous)
-                            .stroke(Color.white.opacity(0.35), lineWidth: 1)
-                    )
-                    .padding(.horizontal, 20)
-
-                    NavigationLink(destination: OzoneNFCSwiftUIWrapper(documentKey: documentKey, completion: onScanFinished),
-                                   isActive: $showOzoneView) {
-                        EmptyView()
+                case .scan(let documentKey, let scanResult, let mrz):
+                    OzoneNFCSwiftUIWrapper(documentKey: documentKey) { result in
+                        onScanFinished(result, scanResult: scanResult, mrz: mrz)
                     }
-                    NavigationLink(destination: NFCResultView(passport: passport), isActive: $showResultView) {
-                        EmptyView()
-                    }
+                case .result(let passport):
+                    NFCResultView(passport: passport)
                 }
-            }
-            .alert(isPresented: $showAlert) {
-                Alert(title: Text(String(localized: "Error", comment: "Error alert title")), message: Text(errorMessage))
-            }
-            .onChange(of: passportNumber) { _ in
-                saveFormValues()
-            }
-            .onChange(of: selectedDateOfBirth) { _ in
-                saveFormValues()
-            }
-            .onChange(of: selectedExpiryDate) { _ in
-                saveFormValues()
             }
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button(action: { dismiss() }) {
-                        Image(systemName: "xmark")
+                ToolbarItemGroup(placement: .topBarTrailing) {
+                    if case .confirm(let scanResult, let mrz) = step {
+                        Button(action: retake) {
+                            Image(systemName: "arrow.counterclockwise")
+                        }
+                        .accessibilityLabel(String(localized: "Retake", comment: "Button title to retake the document photo"))
+
+                        Button(action: { startScan(with: scanResult, mrz: mrz) }) {
+                            Image(systemName: "wave.3.right")
+                        }
+                        .accessibilityLabel(String(localized: "Start NFC scan", comment: "Button title to start the NFC scan using the read MRZ data"))
                     }
-                    .accessibilityLabel("Close NFC demo")
+                }
+                ToolbarItem(placement: .topBarTrailing) {
+                    if case .capture = step {
+                        EmptyView()
+                    } else {
+                        Button(action: { dismiss() }) {
+                            Image(systemName: "xmark")
+                        }
+                        .accessibilityLabel("Close NFC demo")
+                    }
                 }
             }
         }
     }
 
-    private func actionLabel(title: String, systemImage: String) -> some View {
+    private func handleCaptured(_ result: DocumentScannerResult) {
+        switch result.result {
+        case .success(let success):
+            if let mrz = success.mrz,
+               let documentNumber = mrz.documentNumber, !documentNumber.isEmpty,
+               let dateOfBirth = mrz.dateOfBirth, MRZDateCodec.bacKeyString(fromReceivedDate: dateOfBirth) != nil,
+               let expiryDate = mrz.expiryDate, MRZDateCodec.bacKeyString(fromReceivedDate: expiryDate) != nil {
+                step = .confirm(result, mrz: mrz)
+            } else {
+                dismiss()
+            }
+        case .failure:
+            dismiss()
+        @unknown default:
+            dismiss()
+        }
+    }
+
+    private func actionLabel(title: String, systemImage: String, isProminent: Bool) -> some View {
         HStack(spacing: 10) {
             Image(systemName: systemImage)
             Text(title)
@@ -167,89 +104,53 @@ struct NFCDemoView: View {
         .frame(maxWidth: .infinity)
         .padding(.horizontal, 24)
         .padding(.vertical, 14)
-        .background(Color.accentColor)
-        .foregroundColor(.white)
+        .background(isProminent ? Color.accentColor : Color.clear)
+        .foregroundColor(isProminent ? .white : .accentColor)
+        .overlay(
+            Capsule().stroke(Color.accentColor, lineWidth: isProminent ? 0 : 1.5)
+        )
         .clipShape(Capsule())
-        .shadow(color: Color.accentColor.opacity(0.25), radius: 8, x: 0, y: 4)
+        .shadow(color: isProminent ? Color.accentColor.opacity(0.25) : .clear, radius: 8, x: 0, y: 4)
     }
 
-    private enum DocumentKeyDateCodec {
-        private static let calendar: Calendar = {
-            var calendar = Calendar(identifier: .gregorian)
-            calendar.timeZone = .autoupdatingCurrent
-            return calendar
-        }()
+    private func retake() {
+        captureAttempt += 1
+        step = .capture
+    }
 
-        private static let formatter: DateFormatter = {
+    private func startScan(with scanResult: DocumentScannerResult, mrz: MRZData) {
+        // handleCaptured already confirmed both dates convert before reaching .confirm.
+        let documentKey = OzoneNFCDocumentKey(
+            passportNumber: mrz.documentNumber ?? "",
+            dateOfBirth: mrz.dateOfBirth.flatMap(MRZDateCodec.bacKeyString(fromReceivedDate:)) ?? "",
+            expiryDate: mrz.expiryDate.flatMap(MRZDateCodec.bacKeyString(fromReceivedDate:)) ?? ""
+        )
+        step = .scan(documentKey, scanResult: scanResult, mrz: mrz)
+    }
+
+    private func onScanFinished(_ result: Result<OzoneNFCDocument, OzoneNFCError>, scanResult: DocumentScannerResult, mrz: MRZData) {
+        switch result {
+        case .success(let passport):
+            step = .result(passport)
+        case .failure:
+            step = .confirm(scanResult, mrz: mrz)
+        }
+    }
+
+    /// Validates the `yyMMdd` dates Document's MRZData returns and normalizes them into
+    /// the form the NFC BAC key requires.
+    private enum MRZDateCodec {
+        private static let bacKeyFormatter: DateFormatter = {
             let formatter = DateFormatter()
-            formatter.calendar = calendar
+            formatter.calendar = Calendar(identifier: .gregorian)
             formatter.locale = Locale(identifier: "en_US_POSIX")
-            formatter.timeZone = .autoupdatingCurrent
+            formatter.timeZone = TimeZone(identifier: "UTC")
             formatter.dateFormat = "yyMMdd"
             return formatter
         }()
 
-        static func date(from value: String, fallback: Date = .now) -> Date {
-            normalized(formatter.date(from: value) ?? fallback)
-        }
-
-        static func string(from date: Date) -> String {
-            formatter.string(from: normalized(date))
-        }
-
-        private static func normalized(_ date: Date) -> Date {
-            let startOfDay = calendar.startOfDay(for: date)
-            return calendar.date(byAdding: .hour, value: 12, to: startOfDay) ?? date
-        }
-    }
-
-    private func saveFormValues() {
-        InMemoryFormStore.values = FormValues(
-            passportNumber: passportNumber,
-            dateOfBirth: selectedDateOfBirth,
-            expiryDate: selectedExpiryDate
-        )
-    }
-    
-    func readDocument() async {
-        guard !passportNumber.isEmpty else {
-            errorMessage = String(localized: "Passport number is required", comment: "Error message when passport number is empty")
-            showAlert = true
-            return
-        }
-        
-        do {
-            passport = try await ozoneReader.readDocument(currentDocumentKey)
-            showResultView = true
-        } catch let error as OzoneNFCError {
-            errorMessage = error.localizedDescription
-            showAlert = true
-        } catch {
-            let format = String(localized: "Unexpected error: %@", comment: "Generic error message for unexpected errors")
-            errorMessage = String(format: format, error.localizedDescription)
-            showAlert = true
-        }
-    }
-    
-    func navigateToOzoneNFCView() {
-        guard !passportNumber.isEmpty else {
-            errorMessage = String(localized: "Passport number is required", comment: "Error message when passport number is empty")
-            showAlert = true
-            return
-        }
-        
-        documentKey = currentDocumentKey
-        showOzoneView = true
-    }
-    
-    func onScanFinished(_ result: Result<OzoneNFCDocument, OzoneNFCError>) {
-        switch result {
-        case .success(let passport):
-            self.passport = passport
-            showOzoneView = false
-            showResultView = true
-        case .failure:
-            showOzoneView = false
+        static func bacKeyString(fromReceivedDate receivedDate: String) -> String? {
+            bacKeyFormatter.date(from: receivedDate).map(bacKeyFormatter.string)
         }
     }
 }

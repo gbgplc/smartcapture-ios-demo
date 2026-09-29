@@ -8,17 +8,28 @@
 import SwiftUI
 import Document
 
-struct DocumentResultView: View {
+struct DocumentResultView<Actions: View>: View {
     let result: DocumentProcessingState.Result
     let metadata: DocumentProcessingMetadata?
-        
+    @ViewBuilder let actions: () -> Actions
+
+    init(
+        result: DocumentProcessingState.Result,
+        metadata: DocumentProcessingMetadata?,
+        @ViewBuilder actions: @escaping () -> Actions = { EmptyView() }
+    ) {
+        self.result = result
+        self.metadata = metadata
+        self.actions = actions
+    }
+
     var appVersion: String {
         let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "Unknown"
         let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "Unknown"
         return "Version \(version) (Build \(build))"
     }
 
-    
+
     var body: some View {
         ScrollView {
             VStack(spacing: 24) {
@@ -30,6 +41,7 @@ struct DocumentResultView: View {
                 @unknown default:
                     fatalError()
                 }
+                actions()
                 Text(appVersion)
                     .font(.caption)
                 Spacer()

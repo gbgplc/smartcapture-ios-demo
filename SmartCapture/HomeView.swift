@@ -95,7 +95,7 @@ struct HomeView: View {
                                 viewModel.showCamera = true
                             }
                         case .ozone:
-                            DemoTypeView(label: "NFC", systemImage: "wave.3.right.circle") {
+                            DemoTypeView(label: "Document & NFC", systemImage: "wave.3.right.circle") {
                                 viewModel.showNFCDemo = true
                             }
                         default:

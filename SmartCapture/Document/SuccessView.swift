@@ -20,6 +20,9 @@ struct SuccessView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             headerSection
+            if let mrz = success.mrz {
+                mrzSection(mrz)
+            }
             qualityResultsSection
             dimensionsSection
             if metadata != nil {
@@ -29,6 +32,20 @@ struct SuccessView: View {
                 capturedImageSection(uiImage: uiImage)
             }
         }
+    }
+
+    private func mrzSection(_ mrz: MRZData) -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("MRZ")
+                .font(.headline)
+            Text("Passport Number: \(mrz.documentNumber ?? "-")")
+            Text("Date of Birth: \(mrz.dateOfBirth ?? "-")")
+            Text("Expiry Date: \(mrz.expiryDate ?? "-")")
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding()
+        .background(Color.purple.opacity(0.08))
+        .cornerRadius(16)
     }
 
     private var headerSection: some View {
