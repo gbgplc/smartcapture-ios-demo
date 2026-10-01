@@ -57,7 +57,7 @@ The following entry is required to read ePassports. `A0000002471001` is the glob
 
 ## Dependencies
 
-To run the demos, the following dependencies are required:
+To run the demos, the following dependencies are required. The project requires iOS 15.0+ and Xcode 26. SmartCapture 1.7.0 uses OpenSSL 3.x (earlier versions used OpenSSL 1.1).
 
 - All `.xcframework` files must be placed in the `Dependencies` folder (provided separately).
 - Required frameworks:
@@ -65,14 +65,17 @@ To run the demos, the following dependencies are required:
   - `Dependencies/facecamera/FaceCamera.xcframework`
   - `Dependencies/idrnd/IDLiveFaceCamera.xcframework`
   - `Dependencies/idrnd/IDLiveFaceIAD.xcframework`
-  - `Dependencies/smart-capture/IDSSmartCapture.xcframework`
-  - `Dependencies/smart-capture/IDSSmartCaptureResources.bundle`
+  - `Dependencies/idscamera/IDSCamera.xcframework`
   - `Dependencies/ozone/OzoneNFC.xcframework`
-- Additional frameworks to be installed via Carthage:
-  - `git "git@github.com:gbgplc-internal/identity-idscan-camera-ios.git" "main"`
-  - `binary "lottie-ios.json" == 4.6.0`
-  - `github "krzyzanowskim/OpenSSL" "1.1.2301"`
+- Additional frameworks to be installed via Carthage. Create a `Cartfile` in the project root (next to `SmartCapture.xcodeproj`) with:
+  ```
+  github "airbnb/lottie-ios" "4.6.0"
+  github "krzyzanowskim/OpenSSL" "3.6.3000"
+  ```
 
 Run script to install:
   ```sh
   carthage update --use-xcframeworks
+  ```
+
+Then open `SmartCapture.xcodeproj`, select the **SmartCapture** target → **Signing & Capabilities**, choose your own **Team** and set a **Bundle Identifier** under that team. Run the **Debug** configuration on a physical device (camera and NFC are not available in the Simulator).
